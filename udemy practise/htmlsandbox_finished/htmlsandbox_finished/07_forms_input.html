@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms & Input</title>
+</head>
+<body>
+  <!-- <form action="">The HTML <form> element is used to create an HTML form for user input</form> -->
+  <!-- <form action="">form action is nothing but where the form action will take place 
+       like which page the form should be submited 
+  </form> -->
+  <form action="process.php">
+    <!-- Text -->
+    <div>
+      <!-- <div>div is nothing but a division tag</div> -->
+      <label for="name">Name</label><br>
+      <!-- <label for="">label tag, lable which are used to fill the forms </label>
+      if i give id and "name" then if i go to output and if i click on name it will triger to name box
+    or in simple we can say it will highlite the form  -->
+      <input type="text" id="name" name="name" value="John Doe">
+    </div>
+    <!-- Email -->
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email" placeholder="Enter an email">
+    </div>
+    <!-- Textarea -->
+    <div>
+      <label for="message">Message</label><br>
+      <!-- <textarea name="" id="" cols="30" rows="10">
+        textarea are nothing but a tag which is used for a text message or any long texr 
+      </textarea> -->
+      <textarea name="message" id="message" cols="50" rows="5"></textarea>
+    </div>
+    <!-- Select -->
+    <div>
+      <!-- <select name="" id="">select tag is a option for selecting any option in a list </select> -->
+      <label for="sex">Sex</label>
+      <select name="sex" id="sex">
+        <!-- <option value="">option is a tag wich is used to list an option </option> -->
+        <option value="male">Male</option>
+        <option value="female" selected>Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <!-- Number -->
+    <div>
+      <!-- hear number is a number type where any other key words will not work 
+      age is given because age shows the arrow mark to select the age -->
+      <label for="age">Age</label><br>
+      <input type="number" name="age" id="age">
+    </div>
+    <!-- Date -->
+    <div>
+   <!-- hear the date attribute is used because it shows the date selector in the output  -->
+      <label for="bithdate">Birthdate</label><br>
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+    <!-- Radio -->
+    <div>
+      <!-- radio is nothing to select any one option among these three  -->
+      <label for="membership">Membership</label>
+      <input type="radio" name="membership" value="simple" id="membership"> Simple
+      <input type="radio" name="membership" value="standard" id="membership" checked> Standard
+      <input type="radio" name="membership" value="super" id="membership"> Super
+    </div>
+    <!-- Checkbox -->
+    <!-- check box tag like selecting many options or selecting more than one option   -->
+    <div>
+      <label for="membership">I Like..</label>
+      <input type="checkbox" name="likes" value="bike" id="likes"> Bike
+      <input type="checkbox" name="likes" value="car" id="likes"> Car
+      <input type="checkbox" name="likes" value="boat" id="likes"> Boat
+    </div>
+    <!-- Input submit -->
+    <input type="submit" value="Submit">
+    <!-- Button submit -->
+    <!-- <button type="submit">Submit</button> -->
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>

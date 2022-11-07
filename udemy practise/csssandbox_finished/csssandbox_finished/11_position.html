@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Positioning</title>
+  <style>
+    body {
+      height: 4000px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background: #333;
+    }
+
+    #box-1 {
+      /* so by giving position relative we can change the position:relativeof the box or items */
+      position: relative;
+      top: 50px;
+      left: 50px;
+      /* it is used to bring the backside things to front */
+      z-index: 1;
+      background: red;
+    }
+    #box-2 {
+      /* if position absolute is given because it will change witin its parent line */
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      background: yellow;
+    }
+    #box-3 {
+      position: absolute;
+      bottom: 100px;
+      right: 100px;
+      background: green;
+    }
+    #box-4 {
+      position: fixed;
+      background: blue;
+    }
+    #box-5 {
+      /* it helps to stick the content allover the page */
+      position: sticky;
+      top: 0;
+      background: orange;
+      /* -1 where orange card goes behind the red card  */
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div id="box-1" class="box"></div>
+  <div class="container">
+    <div id="box-2" class="box"></div>
+    <div id="box-3" class="box"></div>
+  </div>
+  <div id="box-4" class="box"></div>
+  <div id="box-5" class="box"></div>
+</body>
+</html>
